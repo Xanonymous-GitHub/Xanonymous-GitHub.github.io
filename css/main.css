@@ -1,0 +1,43 @@
+body{
+    height: 100vh;
+}
+.base {
+  background-color: wheat;
+  position: absolute;
+  width: 80%;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  box-shadow: 3px 3px 5px 6px rgb(42, 42, 42);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.left {
+  height: auto;
+  width: 380px;
+  
+}
+.my_personal_img {
+  margin: 10px 10px 10px 10px;
+}
+.my_status{
+    background-color: aquamarine;
+    margin: 10px 10px 10px 10px;
+    border-radius: 10px;
+    width: auto;
+    height: 50px;
+    position: inherit;
+    box-shadow: 2px 2px 4px 4px rgb(42, 42, 42);
+}
+#my_photo{
+    box-shadow: 2px 2px 4px 4px rgb(42, 42, 42);
+}
+.flex{
+    display: flex;
+}
+.flex span{
+    justify-content: center;
+    align-items:center;
+    color: tomato;
+}
