@@ -1,5 +1,5 @@
-body{
-    height: 100vh;
+body {
+  height: 100vh;
 }
 .base {
   background-color: wheat;
@@ -16,28 +16,37 @@ body{
 .left {
   height: auto;
   width: 380px;
-  
+}
+.right{
+    display: inline;
 }
 .my_personal_img {
   margin: 10px 10px 10px 10px;
 }
-.my_status{
-    background-color: aquamarine;
-    margin: 10px 10px 10px 10px;
-    border-radius: 10px;
+.my_status {
+  background-color: aquamarine;
+  margin: 10px 10px 10px 10px;
+  border-radius: 10px;
+  width: auto;
+  height: 50px;
+  position: inherit;
+  box-shadow: 2px 2px 4px 4px rgb(42, 42, 42);
+}
+#my_photo {
+  box-shadow: 2px 2px 4px 4px rgb(42, 42, 42);
+}
+.flex {
+  display: flex;
+}
+.my_status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  /*text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;*/
+}
+.my_icon{
     width: auto;
-    height: 50px;
-    position: inherit;
-    box-shadow: 2px 2px 4px 4px rgb(42, 42, 42);
-}
-#my_photo{
-    box-shadow: 2px 2px 4px 4px rgb(42, 42, 42);
-}
-.flex{
-    display: flex;
-}
-.flex span{
-    justify-content: center;
-    align-items:center;
-    color: tomato;
+    height: 100%;
 }

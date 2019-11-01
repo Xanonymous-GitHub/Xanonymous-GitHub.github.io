@@ -10,8 +10,9 @@
       crossorigin="anonymous"
       defer
     ></script>
-    <script src="js/main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/vue" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/main_vue.js" defer></script>
     <link href="./css/main.css" type="text/css" rel="stylesheet" />
     <title>Xanonymous學長</title>
   </head>
@@ -29,13 +30,25 @@
           />
         </div>
         <div id="my_personal_info" class="my_personal_info">
-
-            <div id="my_status flex" class="my_status">
-                <span>Learning EVERYTHINGS.</span>
-            </div>
-
+          <div id="my_status flex">
+            <span class="my_status">
+              <img
+                class="my_icon"
+                src="https://github.githubassets.com/images/icons/emoji/octocat.png"
+                alt=""
+              />
+              {{ my_status }}</span
+            >
+          </div>
         </div>
       </div>
+
+      <div id="right" class="right">
+          <h1>
+              {{title}}
+          </h1>
+      </div>
+
     </div>
   </body>
 </html>
