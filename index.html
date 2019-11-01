@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,14 +11,33 @@
       defer
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/vue" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+      defer
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"
+      defer
+    ></script>
     <script src="js/main.js" defer></script>
     <script src="js/main_vue.js" defer></script>
     <link href="./css/main.css" type="text/css" rel="stylesheet" />
     <title>Xanonymous學長</title>
   </head>
   <body>
-    <div id="base" class="base">
-      <div id="left" class="left">
+    <div id="base" class="base flex">
+      <div id="left" class="left flex_a">
         <div id="my_personal_img" class="my_personal_img">
           <img
             width="360"
@@ -28,27 +47,21 @@
             style="border-radius:10px;"
             id="my_photo"
           />
-        </div>
-        <div id="my_personal_info" class="my_personal_info">
-          <div id="my_status flex">
-            <span class="my_status">
-              <img
-                class="my_icon"
-                src="https://github.githubassets.com/images/icons/emoji/octocat.png"
-                alt=""
-              />
-              {{ my_status }}</span
-            >
-          </div>
+          <span class="my_status">
+            <img
+              class="my_icon"
+              src="https://github.githubassets.com/images/icons/emoji/octocat.png"
+              alt=""
+            />
+            {{ my_status }}</span
+          >
         </div>
       </div>
-
-      <div id="right" class="right">
-          <h1>
-              {{title}}
-          </h1>
+      <div id="right" class="right flex_b">
+        <h1>
+          {{ title }}
+        </h1>
       </div>
-
     </div>
   </body>
 </html>
