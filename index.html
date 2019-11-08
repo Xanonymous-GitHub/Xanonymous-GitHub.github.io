@@ -58,14 +58,30 @@
         </div>
       </div>
       <div id="right" class="right flex_b">
-        <h1 class="main_title">
-          <span class="main-title">
-            {{ title }}
-          </span>
+        <h1 class="main_title main-title">
+          {{ title }}
         </h1>
-        <div class="To-Do-List">
-          
+        <div class="mx-3 my-3 main_title main-title">
+          <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="請輸入待辦項目"
+            aria-label="請輸入待辦項目"
+            aria-describedby="button-addon2"
+          />
+          <div class="input-group-append">
+            <button
+              class="btn btn-outline-secondary"
+              type="button"
+              id="button-addon2"
+            >
+              新增
+            </button>
+          </div>
         </div>
+        </div>
+        
       </div>
     </div>
   </body>
