@@ -1,128 +1,5 @@
-/*CSS-Reset*/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
 /*Main*/
+@import url(default.css);
 .base {
   background-color: wheat;
   position: absolute;
@@ -133,7 +10,6 @@ table {
   transform: translate(-50%, -50%);
   border-radius: 20px;
   box-shadow: 3px 3px 5px 6px rgb(42, 42, 42);
-  font-family: Arial, Helvetica, sans-serif;
 }
 .left {
   height: auto;
@@ -160,6 +36,18 @@ table {
   font-weight: bold;
   min-height: 20px;
 }
+.main-title{
+  background-color: white;
+  margin: 10px 0px 10px 0px;
+  border-radius: 10px;
+  width: auto;
+  position: inherit;
+  box-shadow: 2px 2px 4px 4px rgb(42, 42, 42);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
 #my_photo {
   box-shadow: 2px 2px 4px 4px rgb(42, 42, 42);
   width: 100%;
@@ -181,14 +69,12 @@ table {
 }
 .main_title {
   text-align: center;
-  font-size: 3em;
-  margin: 10px;
+  font-size: 2.8em;
+  margin: 10px 10px 10px 10px;
 }
 @media (max-width: 1250px) {
   .my_status {
     font-size: 0.8em;
-  }
-  .my_status {
     height: 30px;
   }
   .main_title {
@@ -198,12 +84,10 @@ table {
 @media (max-width: 900px) {
   .my_status {
     font-size: 0.5em;
-  }
-  .my_status {
     height: 20px;
   }
   .main_title {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 }
 @media (max-width: 600px) {
@@ -215,13 +99,13 @@ table {
     width: 100%;
   }
   .my_status {
+    margin: 5px default;
     font-size: 0.6em;
-  }
-  .my_status {
     height: 10px;
   }
   .main_title {
-    font-size: 1em;
+    margin: 5px default;
+    font-size: 0.9em;
   }
   .flex {
     flex-direction: column;
