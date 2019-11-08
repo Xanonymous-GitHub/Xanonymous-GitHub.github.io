@@ -2,7 +2,7 @@
 .base {
   background-color: wheat;
   position: absolute;
-  width: 80%;
+  width: 95%;
   height: auto;
   left: 50%;
   top: 50%;
@@ -37,7 +37,7 @@
 }
 .main-title{
   background-color: white;
-  margin: 10px 0px 10px 0px;
+  margin: 10px 10px;
   border-radius: 10px;
   width: auto;
   position: inherit;
@@ -46,9 +46,25 @@
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  text-align: center;
+  font-size: 2.8em;
+  white-space: nowrap;
+  padding: 10px;
 }
 .To-Do-List-input{
   text-align: center;
+}
+.to_do_list_title{
+  background-color: white;
+  width: auto;
+  border-radius: .25rem;
+  position: inherit;
+  box-shadow: 2px 2px 4px 4px rgb(42, 42, 42);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2.8em;
 }
 #my_photo {
   box-shadow: 2px 2px 4px 4px rgb(42, 42, 42);
@@ -69,17 +85,12 @@
   width: auto;
   height: 100%;
 }
-.main_title {
-  text-align: center;
-  font-size: 2.8em;
-  margin: 10px 10px 10px 10px;
-}
 @media (max-width: 1250px) {
   .my_status {
     font-size: 0.8em;
     height: 30px;
   }
-  .main_title {
+  .main-title {
     font-size: 2em;
   }
 }
@@ -88,7 +99,7 @@
     font-size: 0.5em;
     height: 20px;
   }
-  .main_title {
+  .main-title {
     font-size: 1.2em;
   }
 }
@@ -106,10 +117,10 @@
     font-size: 0.6em;
     height: 10px;
   }
-  .main_title {
+  .main-title {
     margin: 5px default;
     box-shadow: 1px 1px 2px 2px rgb(42, 42, 42);
-    font-size: 0.9em;
+    font-size: 2em;
   }
   .flex {
     flex-direction: column;
