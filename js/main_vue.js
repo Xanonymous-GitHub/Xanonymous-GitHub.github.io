@@ -7,6 +7,6 @@ const left = new Vue({
 const right = new Vue({
     el: '.right',
     data: {
-        title: 'Xanonymous'
+        title: 'Xanonymous To-Do list'
     }
 })

@@ -1,6 +1,128 @@
-body {
-  height: 100vh;
+/*CSS-Reset*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*Main*/
 .base {
   background-color: wheat;
   position: absolute;
@@ -44,6 +166,7 @@ body {
 }
 .flex {
   display: flex;
+  flex-direction: row;
 }
 .flex_a {
   flex: 1;
@@ -55,12 +178,20 @@ body {
   width: auto;
   height: 100%;
 }
+.main_title {
+  text-align: center;
+  font-size: 3em;
+  margin: 10px;
+}
 @media (max-width: 1250px) {
   .my_status {
     font-size: 0.8em;
   }
   .my_status {
     height: 30px;
+  }
+  .main_title {
+    font-size: 2em;
   }
 }
 @media (max-width: 900px) {
@@ -70,12 +201,28 @@ body {
   .my_status {
     height: 20px;
   }
+  .main_title {
+    font-size: 1.4em;
+  }
 }
 @media (max-width: 600px) {
+  .base {
+    width: auto;
+    height: 80%;
+  }
+  .left,.right{
+    width: 100%;
+  }
   .my_status {
-    font-size: 0.3em;
+    font-size: 0.5em;
   }
   .my_status {
     height: 10px;
+  }
+  .main_title {
+    font-size: 1em;
+  }
+  .flex {
+    flex-direction: column;
   }
 }
