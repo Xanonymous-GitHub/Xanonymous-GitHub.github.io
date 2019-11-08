@@ -1,4 +1,3 @@
-/*Main*/
 @import url(default.css);
 .base {
   background-color: wheat;
@@ -93,7 +92,7 @@
 @media (max-width: 600px) {
   .base {
     width: auto;
-    height: 80%;
+    height: auto;
   }
   .left,.right{
     width: 100%;
