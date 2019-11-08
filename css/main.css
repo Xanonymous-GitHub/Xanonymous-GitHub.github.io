@@ -149,7 +149,7 @@ table {
   background-color: aquamarine;
   margin: 10px 0px 10px 0px;
   border-radius: 10px;
-  width: inherit;
+  width: auto;
   height: 40px;
   position: inherit;
   box-shadow: 2px 2px 4px 4px rgb(42, 42, 42);
@@ -158,6 +158,7 @@ table {
   align-items: center;
   font-size: 1.2em;
   font-weight: bold;
+  min-height: 20px;
 }
 #my_photo {
   box-shadow: 2px 2px 4px 4px rgb(42, 42, 42);
@@ -214,7 +215,7 @@ table {
     width: 100%;
   }
   .my_status {
-    font-size: 0.5em;
+    font-size: 0.6em;
   }
   .my_status {
     height: 10px;
