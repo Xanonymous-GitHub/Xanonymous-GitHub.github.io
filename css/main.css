@@ -35,7 +35,7 @@
   font-weight: bold;
   min-height: 20px;
 }
-.main-title{
+.main-title {
   background-color: white;
   margin: 10px 10px;
   border-radius: 10px;
@@ -51,13 +51,13 @@
   white-space: nowrap;
   padding: 10px;
 }
-.To-Do-List-input{
+.To-Do-List-input {
   text-align: center;
 }
-.to_do_list_title{
+.to_do_list_title {
   background-color: white;
   width: auto;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   position: inherit;
   box-shadow: 2px 2px 4px 4px rgb(42, 42, 42);
   display: flex;
@@ -108,7 +108,8 @@
     width: auto;
     height: auto;
   }
-  .left,.right{
+  .left,
+  .right {
     width: 100%;
   }
   .my_status {
@@ -131,13 +132,17 @@
     width: auto;
     height: auto;
   }
-  .left,.right{
+  .left,
+  .right {
     width: 100%;
   }
   .main-title {
     margin: 2px default;
     box-shadow: 1px 1px 2px 2px rgb(42, 42, 42);
-    font-size: 1em;
+    font-size: 1.5em;
+  }
+  .to_do_list_title {
+    box-shadow: 1px 1px 2px 2px rgb(42, 42, 42);
   }
   .flex {
     flex-direction: column;
