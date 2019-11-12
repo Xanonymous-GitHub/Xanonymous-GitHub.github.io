@@ -36,7 +36,8 @@
   min-height: 20px;
 }
 .main-title {
-  background-color: white;
+  background-color:black;
+  color: azure;
   margin: 10px 10px;
   border-radius: 10px;
   width: auto;
@@ -64,7 +65,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 2.8em;
+  font-size: 1.8em;
 }
 #my_photo {
   box-shadow: 2px 2px 4px 4px rgb(42, 42, 42);
