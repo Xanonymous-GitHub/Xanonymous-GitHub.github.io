@@ -1,5 +1,5 @@
 $(function () {
-    $.fn.createNewItems = function (user_input, item_id) {
+    $.fn.createNewItems = function (user_input, item_id, is_checked) {
         let $new_item = $("<div\>");
         let $new_item_container = $("<div\>");
         let $content_container = $("<div\>");
@@ -15,7 +15,7 @@ $(function () {
         $del_btn.text("Del");
         $del_btn.addClass("btn btn-danger");
         $del_btn.css("whiteSpace", "nowrap");
-        $del_btn.attr("name",item_id);
+        $del_btn.attr("name", item_id);
         $del_btn.click(function (e) {
             $.ajax({
                 type: "DELETE",
@@ -32,7 +32,7 @@ $(function () {
                 fail: function (e) {
 
                 },
-                success:function(){
+                success: function () {
                     $del_btn.hide().parent().parent().parent().fadeOut(500, function () {
                         $del_btn.remove();
                     });
@@ -46,6 +46,7 @@ $(function () {
             "type": "checkbox",
             "name": item_id
         });
+        $chk_box.prop("checked", is_checked);
         $chk_box.click(function (e) {
             let status = $(this).prop("checked");
             $(this).prop("checked", !status);
@@ -60,7 +61,7 @@ $(function () {
                 },
                 complete: function () {
 
-                },  
+                },
                 fail: function (e) {
 
                 },
@@ -98,7 +99,7 @@ $(function () {
                 success: function (data) {
                     e.preventDefault();
                     $("#input_area").val('');
-                    $("#to_do_list_container").createNewItems(user_input, data.item_id);
+                    $("#to_do_list_container").createNewItems(user_input, data.item_id, false);
                 },
             });
 
@@ -110,6 +111,11 @@ $(function () {
         }
         else {
             alert("please input something!")
+        }
+    });
+    $.get("/todolist", function (data) {
+        for (let i = data.length - 1; i >= 0; i--) {
+            createNewItems(data.user_input, data.item_id, data.status);
         }
     });
 });
