@@ -24,12 +24,28 @@ $(function () {
             "type": "checkbox",
             "name": item_id
         });
-        $chk_box.click(function(e){
-            // $.ajax({
-            //     type:"PUT",
-            //     url: "./todolist",
+        $chk_box.click(function (e) {
+            let status = $(this).prop("checked");
+            $(this).prop("checked", !status);
+            $.ajax({
+                type: "PUT",
+                url: "./todolist/" + $(this).name,
+                data: JSON.stringify({ "status": status }),
+                dataType: "JSON",
+                contentType: "application/json",
+                beforeSend: function () {
 
-            // });
+                },
+                complete: function () {
+
+                },
+                fail: function (e) {
+
+                },
+                success: function () {
+                    $(this).prop("checked", status);
+                },
+            });
         });
         $button_container.append($del_btn);
         $content_container.prepend($chk_box);
@@ -41,33 +57,37 @@ $(function () {
     $("body").css("background-color", "#9400D3");
     $("#new_item").click(function (e) {
         let user_input = $("#input_area").val();
-        $.ajax({
-            type:"POST",
-            contentType:"application/json",
-            data:{
-                "user_input":user_input
-            },
-            dataType:"JSON",
-            url:"./todolist",
-            beforeSend:function(){
+        if (user_input.trim() != "") {
+            $.ajax({
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify({ "user_input": user_input }),
+                dataType: "JSON",
+                url: "./todolist",
+                beforeSend: function () {
+                    //
+                },
+                complete: function () {
+                    //alert("request sent")
+                },
+                fail: function (e) {
+                    alert("li way server is die die")
+                },
+                success: function (data) {
+                    e.preventDefault();
+                    $("#input_area").val('');
+                    $("#to_do_list_container").createNewItems(user_input, data.item_id);
+                },
+            });
 
-            },
-            complete:function(){
-                alert("request sent")
-            },
-            fail:function(e){
-                alert("li way server is die die")
-            },
-            success:function(data){
-                e.preventDefault();
-                $("#input_area").val('');
-                if (user_input.trim() != "") {
-                    $("#to_do_list_container").createNewItems(user_input,data.item_id);
-                }
-                else {
-                    alert("please input something!")
-                }
-            },
-        });
+            // //test
+            // e.preventDefault();
+            // $("#input_area").val('');
+            // $("#to_do_list_container").createNewItems(user_input, 0);
+            // //test
+        }
+        else {
+            alert("please input something!")
+        }
     });
 });
