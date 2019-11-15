@@ -15,10 +15,32 @@ $(function () {
         $del_btn.text("Del");
         $del_btn.addClass("btn btn-danger");
         $del_btn.css("whiteSpace", "nowrap");
+        $del_btn.attr("name",item_id);
         $del_btn.click(function (e) {
-            $(this).hide().parent().parent().parent().fadeOut(500, function () {
-                $(this).remove();
+            $.ajax({
+                type: "DELETE",
+                url: "/todolist/" + $(this).attr("name"),
+                // data: JSON.stringify({ status: status }),
+                // dataType: "JSON",
+                // contentType: "application/json",
+                beforeSend: function () {
+
+                },
+                complete: function () {
+
+                },
+                fail: function (e) {
+
+                },
+                success:function(){
+                    $del_btn.hide().parent().parent().parent().fadeOut(500, function () {
+                        $del_btn.remove();
+                    });
+                },
             });
+            // $(this).hide().parent().parent().parent().fadeOut(500, function () {
+            //     $(this).remove();
+            // });
         });
         $chk_box.attr({
             "type": "checkbox",
@@ -43,8 +65,7 @@ $(function () {
 
                 },
                 success: function () {
-                    console.log($(this));
-                    $(this).prop("checked", status);
+                    $chk_box.prop("checked", status);
                 },
             });
         });
