@@ -113,9 +113,9 @@ $(function () {
             alert("please input something!")
         }
     });
-    $.get("/todolist", function (data) {
+    $.get("/todolist/lists", function (data) {
         for (let i = data.length - 1; i >= 0; i--) {
-            createNewItems(data.user_input, data.item_id, data.status);
+            $("#to_do_list_container").createNewItems(data[i].user_input, data[i].item_id, data[i].status);
         }
     });
 });
