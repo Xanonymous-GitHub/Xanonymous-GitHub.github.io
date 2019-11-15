@@ -29,7 +29,7 @@ $(function () {
             $(this).prop("checked", !status);
             $.ajax({
                 type: "PUT",
-                url: "./todolist/" + $(this).name,
+                url: "/todolist/" + $(this).name,
                 data: JSON.stringify({ "status": status }),
                 dataType: "JSON",
                 contentType: "application/json",
@@ -63,7 +63,7 @@ $(function () {
                 contentType: "application/json",
                 data: JSON.stringify({ "user_input": user_input }),
                 dataType: "JSON",
-                url: "./todolist",
+                url: "/todolist",
                 beforeSend: function () {
                     //
                 },
