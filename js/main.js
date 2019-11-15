@@ -29,8 +29,8 @@ $(function () {
             $(this).prop("checked", !status);
             $.ajax({
                 type: "PUT",
-                url: "/todolist" + $(this).attr("name"),
-                data: JSON.stringify({ "status": status }),
+                url: "/todolist/" + $(this).attr("name"),
+                data: JSON.stringify({ status: status }),
                 dataType: "JSON",
                 contentType: "application/json",
                 beforeSend: function () {
@@ -38,11 +38,12 @@ $(function () {
                 },
                 complete: function () {
 
-                },
+                },  
                 fail: function (e) {
 
                 },
                 success: function () {
+                    console.log($(this));
                     $(this).prop("checked", status);
                 },
             });
@@ -61,7 +62,7 @@ $(function () {
             $.ajax({
                 type: "POST",
                 contentType: "application/json",
-                data: JSON.stringify({ "user_input": user_input }),
+                data: JSON.stringify({ user_input: user_input }),
                 dataType: "JSON",
                 url: "/todolist",
                 beforeSend: function () {
